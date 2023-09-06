@@ -1,16 +1,15 @@
- ## Non-Recursive Depth First Search (DFS) in C++
+##Búsqueda en Profundidad No Recursiva (DFS) en C++
+###Introducción
 
-### Introduction
+En teoría de grafos, la Búsqueda en Profundidad (DFS, por sus siglas en inglés) es un algoritmo utilizado para recorrer un grafo. Comienza en un vértice dado y explora todos sus vértices adyacentes, luego todos los vértices adyacentes de esos vértices, y así sucesivamente. Este proceso se repite hasta que se hayan visitado todos los vértices en el grafo.
 
-In graph theory, Depth First Search (DFS) is an algorithm used to traverse a graph. It starts at a given vertex and explores all of its adjacent vertices, then all of the adjacent vertices of those vertices, and so on. This process is repeated until all of the vertices in the graph have been visited.
+DFS se puede implementar de forma recursiva o no recursiva. En este artículo, discutiremos la implementación no recursiva de DFS en C++.
 
-DFS can be implemented recursively or non-recursively. In this article, we will discuss the non-recursive implementation of DFS in C++.
+###Explicación del Código
 
-### Code Explanation
+El código para el algoritmo DFS no recursivo se muestra a continuación:
 
-The code for the non-recursive DFS algorithm is given below:
-
-```c++
+```cpp
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -57,3 +56,15 @@ int main() {
   g.add_edge(1, 3);
   g.
 }
+```
+
+###Pasos para Ejecutar
+
+Compile el código C++ utilizando su compilador preferido. Puede usar el siguiente comando en la línea de comandos si tiene g++ instalado:
+
+    g++ main.cpp -o nombre_del_ejecutable
+
+Ejecute el programa compilado:
+
+    ./nombre_del_ejecutable
+
