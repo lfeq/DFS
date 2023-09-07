@@ -61,10 +61,11 @@ int main() {
 ### Pasos para Ejecutar
 
 Compile el código C++ utilizando su compilador preferido. Puede usar el siguiente comando en la línea de comandos si tiene g++ instalado:
-
-    g++ main.cpp -o nombre_del_ejecutable
+```bash
+g++ main.cpp -o nombre_del_ejecutable
+```
 
 Ejecute el programa compilado:
-
-    ./nombre_del_ejecutable
-
+```bash
+nombre_del_ejecutable
+```
