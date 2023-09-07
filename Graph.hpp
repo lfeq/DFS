@@ -56,4 +56,47 @@ public:
             }
         }
     }
+
+    #pragma region extras
+    /**
+     * @brief Print the graph's adjacency list.
+     * 
+     * This function displays the adjacency list representation of the graph, 
+     * where each vertex is shown along with its adjacent vertices.
+     */
+    void print_graph() {
+        for (int i = 0; i < n; ++i) {
+            cout << "Vertex " << i << " -> ";
+            for (int v : adjacency_list[i]) {
+                cout << v << " ";
+            }
+            cout << endl;
+        }
+    }
+
+    /**
+     * @brief Print the graph's adjacency matrix representation.
+     * 
+     * This function generates and displays the adjacency matrix representation of the graph,
+     * where each cell in the matrix indicates the presence or absence of an edge between
+     * vertices. '1' represents an edge, and '0' represents no edge.
+     */
+    void print_graph_matrix() {
+        vector<vector<char>> matrix(n, vector<char>(n, '0'));
+
+        for (int i = 0; i < n; ++i) {
+            for (int v : adjacency_list[i]) {
+                matrix[i][v] = '1';
+            }
+        }
+
+        cout << "Adjacency Matrix Representation of the Graph:" << endl;
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                cout << matrix[i][j] << " ";
+            }
+            cout << endl;
+        }
+    }
+    #pragma endregion
 };
