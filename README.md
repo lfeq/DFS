@@ -62,7 +62,7 @@ int main() {
 
 Compile el código C++ utilizando su compilador preferido. Puede usar el siguiente comando en la línea de comandos si tiene g++ instalado:
 ```bash
-g++ main.cpp -o nombre_del_ejecutable
+g++ main.cpp Demonstrations.cpp -o nombre_del_ejecutable
 ```
 
 Ejecute el programa compilado:
