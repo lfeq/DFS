@@ -11,7 +11,6 @@ int main() {
   g.add_edge(4, 5);
   g.add_edge(5, 0);
 
-  // Ejecutar el algoritmo DFS no recursivo desde el vértice 0
   cout << "DFS desde el vértice 0:" << endl;
   g.dfs_non_recursive(0);
   cout << endl;
