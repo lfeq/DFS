@@ -60,6 +60,7 @@ public:
 		}
 	}
 
+#pragma region extras
 	void dfs_recursive(int s, vector<bool>& visited) {
 		visited[s] = true;
 		//cout << s << " ";
@@ -75,7 +76,6 @@ public:
 		dfs_recursive(s, visited);
 	}
 
-#pragma region extras
 	/**
 	 * @brief Print the graph's adjacency list.
 	 *

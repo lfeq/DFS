@@ -22,6 +22,8 @@ namespace Demonstrations {
 		cout << endl;
 	}
 
+#pragma region extras
+
 	void RunTreeDemo() {
 		Graph tree(8);
 		tree.add_edge(0, 1);
@@ -79,3 +81,4 @@ namespace Demonstrations {
 
 	}
 }
+#pragma endregion
