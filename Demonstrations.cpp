@@ -40,7 +40,7 @@ namespace Demonstrations {
 	}
 
 	void RunBigGraphDemo() {
-		// Create a graph with 100 nodes
+		// Create a graph with 100000 nodes
 		int num_nodes = 100000;
 		Graph g(num_nodes);
 
@@ -78,7 +78,6 @@ namespace Demonstrations {
 
 		// Print execution time for recursive DFS
 		cout << "Time taken by DFS recursive: " << duration_recursive.count() << " milliseconds" << endl;
-
 	}
 }
 #pragma endregion

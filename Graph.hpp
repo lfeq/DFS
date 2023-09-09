@@ -13,7 +13,6 @@ using namespace std;
  */
 class Graph {
 private:
-	int it = 0;
 	int n; // Number of vertices
 	vector<vector<int>> adjacency_list; // Adjacency list
 
@@ -61,6 +60,15 @@ public:
 	}
 
 #pragma region extras
+	/**
+	 * @brief Depth-First Search (DFS) algorithm implemented using recursion.
+	 *
+	 * This function performs a depth-first search starting from a given source node 's' in a graph.
+	 * It marks visited nodes to prevent revisiting and explores adjacent nodes in a recursive manner.
+	 *
+	 * @param s The source node from which DFS traversal begins.
+	 * @param visited A boolean vector to keep track of visited nodes.
+	 */
 	void dfs_recursive(int s, vector<bool>& visited) {
 		visited[s] = true;
 		//cout << s << " ";
@@ -71,6 +79,14 @@ public:
 		}
 	}
 
+	/**
+	 * @brief Depth-First Search (DFS) traversal function.
+	 *
+	 * This function initiates a DFS traversal starting from a given source node 's' in a graph.
+	 * It creates and manages a boolean vector to track visited nodes and calls the recursive DFS function.
+	 *
+	 * @param s The source node from which DFS traversal begins.
+	 */
 	void dfs(int s) {
 		vector<bool> visited(n, false);
 		dfs_recursive(s, visited);
@@ -117,6 +133,14 @@ public:
 		}
 	}
 
+	/**
+	 * @brief Check for the presence of cycles in an undirected graph.
+	 *
+	 * This function determines whether an undirected graph has cycles by performing a depth-first search (DFS).
+	 * It initializes a boolean vector to keep track of visited nodes and calls a utility function to explore the graph.
+	 *
+	 * @return True if the graph has cycles; otherwise, false.
+	 */
 	bool has_cycle() {
 		vector<bool> visited(n, false);
 		for (int i = 0; i < n; ++i) {
@@ -127,6 +151,17 @@ public:
 		return false;
 	}
 
+	/**
+	 * @brief Utility function for checking cycles in an undirected graph.
+	 *
+	 * This function is used internally by `has_cycle()` to perform a DFS-based cycle check.
+	 * It recursively explores adjacent nodes and checks for back edges in the graph.
+	 *
+	 * @param u The current node being visited.
+	 * @param visited A boolean vector to keep track of visited nodes.
+	 * @param parent The parent node in the DFS traversal.
+	 * @return True if a cycle is found; otherwise, false.
+	 */
 	bool has_cycle_util(int u, vector<bool>& visited, int parent) {
 		visited[u] = true;
 		for (int v : adjacency_list[u]) {
@@ -142,6 +177,14 @@ public:
 		return false;
 	}
 
+	/**
+	 * @brief Count the number of connected components in a graph.
+	 *
+	 * This function counts the number of connected components in a graph using depth-first search (DFS).
+	 * It initializes a boolean vector to track visited nodes and calls a recursive DFS function for each unvisited node.
+	 *
+	 * @return The count of connected components in the graph.
+	 */
 	int count_connected_components() {
 		vector<bool> visited(n, false);
 		int count = 0;
